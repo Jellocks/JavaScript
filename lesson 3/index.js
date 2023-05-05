@@ -45,18 +45,33 @@
 //             }]
 //         }
 //     },
+//     {
+//         id: 3,
+//         title: 'Birdman',
+//         year: 2014,
+//         actors: ['Michael Keaton', 'Zach Galifianakis', 'Edward Norton'],
+//         description: `The film stars Michael Keaton as Riggan Thomson, a faded Hollywood actor best known for playing the superhero "Birdman", as he struggles to mount a Broadway adaptation of Raymond Carver's short story, "What We Talk About When We Talk About Love". The film also features a supporting cast of Zach Galifianakis, Edward Norton, Andrea Riseborough, Amy Ryan, Emma Stone, and Naomi Watts.`,
+//         details: {
+//             genre: 'Comedy-drama',
+//             reviews: [{
+//                 username: 'peonylion', content:
+//                     `If it is a comedy, it is not a black one, but a drama combined with a tragicomedy. She was in the program of the first channel. I read the brief description. I started watching, forcing myself to watch to the end every now and then.`,
+//                 score: 6
+//             }]
+//         }
+//     },
 // ];
 
-// function filterShows(movie, year, rating) {
-//     movies.forEach((key) => {
-//         if (key.title == movie && key.year == year && key.details.reviews[0].score == rating) {
-//             console.log(key.title, key.year, key.details.reviews[0].score);
+// function filterShow(movie, year, rating) {
+//     movies.forEach((el) => {
+//         if (el.title == movie && el.year == year && el.details.reviews[0].score == rating) {
+//             let banner = el.title;
+//             console.log([el.title, el.year, el.details.reviews[0].score])
 //         }
 //     });
 
 // };
-// filterShows('Birdman', 2014, 6);
-
+// filterShow('Birdman', 2014, 6);
 
 // function getWord(number, array) {
 //     if (number == 12 || number == 13 || number == 14 || number % 10 == 5 || number % 10 == 6 || number % 10 == 7 || number % 10 == 8 || number % 10 == 9 || number % 10 == 0) {
