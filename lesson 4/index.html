@@ -5,11 +5,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 4</title>
+    <title>Js practise</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <script src="./index.js"></script>
+    <header class="header">
+        <div class="container">
+            <div class="header-icons">
+                <img src="./img/img-1.png" alt="img" class="icon-img">
+                <img src="./img/img-2.png" alt="img" class="icon-img">
+                <img src="./img/img-3.png" alt="img" class="icon-img">
+                <img src="./img/img-4.png" alt="img" class="icon-img">
+                <img src="./img/img-5.png" alt="img" class="icon-img">
+                <img src="./img/img-6.png" alt="img" class="icon-img">
+                <img src="./img/img-7.png" alt="img" class="icon-img">
+                <img src="./img/img-8.png" alt="img" class="icon-img">
+                <img src="./img/img-9.png" alt="img" class="icon-img">
+            </div>
+            <div class="header-cards">
+                <img src="./img/card-1.png" alt="img" class="card-img">
+                <img src="./img/card-2.jpg" alt="img" class="card-img">
+                <img src="./img/card-3.jpg" alt="img" class="card-img">
+            </div>
+        </div>
+    </header>
+    <div class="rating">
+        <div class="container">
+            <div class="inner-rating">
+                <p class="rating-text"><span class="green">8.1</span> / 10</p>
+                <p class="rating-text"><span class="yellow">6.1</span> / 10</p>
+                <p class="rating-text"><span class="red">4.1</span> / 10</p>
+            </div>
+        </div>
+    </div>
+    <div class="inner">
+        <div class="container">
+            <div class="inner-hero">
+                <div class="hero-title">
+                    <p class="title-text">guardians of the galaxy vol. 3</p>
+
+                    <p class="hero-rating"><span class="text">Rating:</span> <span class="yellow">7.1</span> / 10
+                    </p>
+                    <form action="submit" class="active-form hidden">
+                        <p class="form-text">Rate film:</p>
+                        <input type="number" class="rating-input" min="0" max="10" />
+                        <button class="rating-button">Rate</button>
+                    </form>
+                </div>
+                <div class="hero-info">
+                    <div class="hero-img">
+                        <img src="./img/card-1.png" alt="img" class="card-img__title">
+                    </div>
+                    <div class="hero-additional">
+                        <p class="subtitle">Still reeling from the loss of Gamora, Peter Quill must rally his team to
+                            defend the universe<br> and protect one of their
+                            own. If the mission is not completely successful, it could possibly<br> lead to the end of
+                            the
+                            Guardians as we know them.</p>
+                        <div class="hero-buttons">
+                            <button class="button-first">Drama</button>
+                            <button class="button-second">Fantasy</button>
+                        </div>
+                        <div class="hero-cast">
+                            <p class="cast">Cast:</p>
+                        </div>
+
+
+                        <div class="hero-cards">
+                            <div class="card-1">
+                                <img src="./img/img-1.png" alt="img" class="icon-first">
+                                <p class="card-info__first">Chris Pratt</p>
+                            </div>
+                            <div class="card-2">
+                                <img src="./img/img-2.png" alt="img" class="icon-second">
+                                <p class="card-info__second">Bradley Cooper</p>
+                            </div>
+                            <div class="card-3">
+                                <img src="./img/img-3.png" alt="img" class="icon-third">
+                                <p class="card-info__third">Zoe Saldana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="similar">Similar movies</p>
+                <div class="similar-cards">
+                    <img src="./img/card-2.jpg" alt="img" class="card-img__first">
+                    <img src="./img/card-3.jpg" alt="img" class="card-img__second">
+                </div>
+            </div>
+            <div class="inner-rate">
+                <p class="rate-title">Rate this</p>
+                <p class="rate-subtitle">Sharper</p>
+                <div class="rate-calc">
+                    <p class="calc-text">0</p>
+                </div>
+                <button class="rate-button">RATE</button>
+            </div>
+        </div>
+    </div>
+    <script src="./data.js"></script>
 </body>
 
 </html>
