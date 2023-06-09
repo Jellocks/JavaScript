@@ -81,46 +81,43 @@ const movies = [
 
 
 1.
-const actors = [
-  { name: 'Tom Hanks', birthYear: 1956 },
-  { name: 'Meryl Streep', birthYear: 1949 },
-  { name: 'Denzel Washington', birthYear: 1954 },
-];
-
-
 const currentYear = new Date().getFullYear();
 
+const moviesWithAge = movies.map((movie) => {
+  const actorsWithAge = movie.actors.map((actor) => {
 
-const actorsWithAge = actors.map(actor => {
-  const age = currentYear - actor.birthYear;
-  return { ...actor, age };
+    let age = currentYear - actor.birthyear;
+    if (actor.birthyear === null) {
+      actor.birthyear = "не указан год рождения актера";
+      age = "возраст аткера отсутсвует, так как не указан год рождения"
+    }
+    return {
+      ...actor,
+      age: age,
+    };
+  });
+  return {
+    ...movie,
+    actors: actorsWithAge,
+  }
 });
 
-console.log(actorsWithAge);
-
+console.log(moviesWithAge);
 2.
-const genres = [
-  {
-    name: "Thriller",
-    movies: ["Plane", "Sharper"],
-  },
-  {
-    name: "Adventure",
-    movies: ["Guardians of the Galaxy Vol. 3", "Plane"],
-  },
-  {
-    name: "Crime",
-    movies: ["Sharper", "Plane"],
-  },
-  {
-    name: "Drama",
-    movies: ["Guardians of the Galaxy Vol. 3", "Sharper"],
-  },
-  {
-    name: "Comedy",
-    movies: ["Guardians of the Galaxy Vol. 3"],
-  },
-];
+const genres = movies.reduce((accumulator, currentMovie) => {
+  currentMovie.genre.forEach((genre) => {
+    const foundGenre = accumulator.find((g) => g.name === genre);
+    if (foundGenre) {
+      foundGenre.movies.push(currentMovie.title);
+    } else {
+      accumulator.push({ name: genre, movies: [currentMovie.title] });
+    }
+  });
+  return accumulator;
+}, []);
+
+console.log(genres);
+
 3.
 // Функция для получения фильма по ID и отображения его на странице
 const getMovie = (id) => {
@@ -141,7 +138,10 @@ const getMovie = (id) => {
     iconFirst = document.querySelector('.icon-first');
     iconSecond = document.querySelector('.icon-second');
     iconThird = document.querySelector('.icon-third');
-
+    buttonFirst = document.querySelector('.button-first');
+    buttonSecond = document.querySelector('.button-second');
+    buttonThird = document.querySelector('.button-third');
+    formTitle = document.querySelector('.form-subtitle');
 
     titleEl.innerHTML = movie.title;
     descriptionEl.innerHTML = movie.description;
@@ -166,6 +166,10 @@ const getMovie = (id) => {
       iconFirst.setAttribute('src', './img/img-4.png');
       iconSecond.setAttribute('src', './img/img-5.png');
       iconThird.setAttribute('src', './img/img-6.png');
+      buttonFirst.textContent = 'Thriller';
+      buttonSecond.textContent = "Crime";
+      buttonThird.classList.remove('disabled');
+      formTitle.innerHTML = 'Plane';
     } else if (id == 3) {
       imgFirst.setAttribute('src', './img/card-3.jpg');
       imgThird.setAttribute('src', './img/card-1.png');
@@ -175,6 +179,11 @@ const getMovie = (id) => {
       infoFirst.innerHTML = movies[2].actors[0].name;
       infoSecond.innerHTML = movies[2].actors[1].name;
       infoThird.innerHTML = movies[2].actors[2].name;
+      buttonFirst.textContent = 'Thriller';
+      buttonSecond.textContent = "Crime";
+      buttonThird.classList.remove('disabled');
+      buttonThird.textContent = 'Drama';
+      formTitle.innerHTML = 'Sharper';
     }
     if (!movie) {
       // если фильм не найден, выводим сообщение об ошибке
@@ -184,7 +193,7 @@ const getMovie = (id) => {
   }
 
 }
-getMovie(3);
+getMovie(2);
 
 4.
 const rating = document.querySelector('.hero-rating');
@@ -193,8 +202,8 @@ ratingInput = document.querySelector('.rating-input');
 ratingButton = document.querySelector('rating-button');
 
 rating.addEventListener('mouseenter', () => {
-  ratingForm.classList.remove('hidden');
-  rating.classList.add('hidden');
+  ratingForm.classList.remove('disabled');
+
 });
 // Добавляем обработчик события submit на форму оценки
 ratingForm.addEventListener('submit', (e) => {
@@ -225,6 +234,7 @@ ratingForm.addEventListener('submit', (e) => {
   // Очищаем значение input
   ratingInput.value = '';
 });
+
 
 
 

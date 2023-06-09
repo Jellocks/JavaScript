@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #2B2B2B;
 }
 
 .header .container {
@@ -89,9 +89,9 @@ body {
 }
 
 .inner .container {
-    width: 1398px;
+    width: 1200px;
+    background-color: 2B2B2B;
     margin: 0 auto;
-    background: black;
     display: flex;
 }
 
@@ -118,6 +118,7 @@ body {
     line-height: 21px;
     /* identical to box height */
     color: #8B8B8B;
+    position: relative;
 }
 
 .title-text {
@@ -152,7 +153,7 @@ body {
     font-weight: 300;
     font-size: 14px;
     line-height: 21px;
-
+    width: 640px;
     color: #FFFFFF;
     margin-bottom: 16px;
 }
@@ -203,11 +204,12 @@ body {
 
 .hero-cards {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .card-1 {
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-right: 10px;
 }
@@ -257,7 +259,7 @@ body {
 }
 
 .icon-first {
-    margin-left: 7px;
+
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -385,8 +387,10 @@ body {
     font-size: 14px;
     line-height: 21px;
     color: #8B8B8B;
-    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    margin-top: 15px;
     text-align: center;
+
 }
 
 .active-form {
@@ -394,13 +398,19 @@ body {
     flex-direction: column;
     margin-right: 20px;
     background-color: #D9D9D9;
-    width: 100px;
+    width: 123px;
+    height: 143px;
+    position: absolute;
+    top: 100px;
+    right: 80px;
+
+
 }
 
 .rating-input {
     width: 40px;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .rating-button {
@@ -416,4 +426,41 @@ body {
     color: #FFFFFF;
     width: 63px;
     height: 23px;
+}
+
+/* .hero-rating:hover+.active-form {
+
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+} */
+
+.disabled {
+    display: none;
+}
+
+.button-third {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    /* identical to box height */
+    padding: 6px 20px;
+    background: #383838;
+    color: #FFFFFF;
+    border: none;
+
+}
+
+.form-subtitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #383838;
+    margin-bottom: 18px;
 }

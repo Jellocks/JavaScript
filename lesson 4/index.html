@@ -13,35 +13,6 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-icons">
-                <img src="./img/img-1.png" alt="img" class="icon-img">
-                <img src="./img/img-2.png" alt="img" class="icon-img">
-                <img src="./img/img-3.png" alt="img" class="icon-img">
-                <img src="./img/img-4.png" alt="img" class="icon-img">
-                <img src="./img/img-5.png" alt="img" class="icon-img">
-                <img src="./img/img-6.png" alt="img" class="icon-img">
-                <img src="./img/img-7.png" alt="img" class="icon-img">
-                <img src="./img/img-8.png" alt="img" class="icon-img">
-                <img src="./img/img-9.png" alt="img" class="icon-img">
-            </div>
-            <div class="header-cards">
-                <img src="./img/card-1.png" alt="img" class="card-img">
-                <img src="./img/card-2.jpg" alt="img" class="card-img">
-                <img src="./img/card-3.jpg" alt="img" class="card-img">
-            </div>
-        </div>
-    </header>
-    <div class="rating">
-        <div class="container">
-            <div class="inner-rating">
-                <p class="rating-text"><span class="green">8.1</span> / 10</p>
-                <p class="rating-text"><span class="yellow">6.1</span> / 10</p>
-                <p class="rating-text"><span class="red">4.1</span> / 10</p>
-            </div>
-        </div>
-    </div>
     <div class="inner">
         <div class="container">
             <div class="inner-hero">
@@ -50,12 +21,15 @@
 
                     <p class="hero-rating"><span class="text">Rating:</span> <span class="yellow">7.1</span> / 10
                     </p>
-                    <form action="submit" class="active-form hidden">
-                        <p class="form-text">Rate film:</p>
+                    <form action="submit" class="active-form disabled ">
+                        <p class="form-text">Rate this</p>
+                        <p class="form-subtitle">Guardians</p>
                         <input type="number" class="rating-input" min="0" max="10" />
                         <button class="rating-button">Rate</button>
                     </form>
                 </div>
+
+
                 <div class="hero-info">
                     <div class="hero-img">
                         <img src="./img/card-1.png" alt="img" class="card-img__title">
@@ -69,6 +43,7 @@
                         <div class="hero-buttons">
                             <button class="button-first">Drama</button>
                             <button class="button-second">Fantasy</button>
+                            <button class="button-third disabled">Adventure</button>
                         </div>
                         <div class="hero-cast">
                             <p class="cast">Cast:</p>
@@ -96,14 +71,6 @@
                     <img src="./img/card-2.jpg" alt="img" class="card-img__first">
                     <img src="./img/card-3.jpg" alt="img" class="card-img__second">
                 </div>
-            </div>
-            <div class="inner-rate">
-                <p class="rate-title">Rate this</p>
-                <p class="rate-subtitle">Sharper</p>
-                <div class="rate-calc">
-                    <p class="calc-text">0</p>
-                </div>
-                <button class="rate-button">RATE</button>
             </div>
         </div>
     </div>
