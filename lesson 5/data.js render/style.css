@@ -1,0 +1,14 @@
+body {
+    background-color: aqua;
+}
+
+.items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+h2 {
+    color: red;
+    text-align: center;
+    font-size: 50px;
+}
