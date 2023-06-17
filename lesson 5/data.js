@@ -2133,10 +2133,7 @@ const data = [
 
 
 
-const getMovieType = (arr, type) => {
-  const typeMovie = arr.filter(movie => movie.type === type);
-  return typeMovie;
-}
+const getMovieType = (arr, type) => arr.filter((movie) => movie.type === type);
 
 
 const getTemplate = (arr) => {
@@ -2166,13 +2163,13 @@ const getTemplate = (arr) => {
                       </div>
                      
   			`
-    element.type === 'movie' ? movies.insertAdjacentHTML('beforeend', showItem) : false
-    element.type === 'cartoon' ? cartoons.insertAdjacentHTML('beforeend', showItem) : false
-    element.type === 'show' ? shows.insertAdjacentHTML('beforeend', showItem) : false
+    element.type === 'movie' && movies.insertAdjacentHTML('beforeend', showItem);
+    element.type === 'cartoon' && cartoons.insertAdjacentHTML('beforeend', showItem);
+    element.type === 'show' && shows.insertAdjacentHTML('beforeend', showItem);
 
   })
 }
 
-getTemplate(getMovieType(data, 'show'))
-getTemplate(getMovieType(data, 'cartoon'))
-getTemplate(getMovieType(data, 'movie'))
+getTemplate(getMovieType(data, 'show'));
+getTemplate(getMovieType(data, 'cartoon'));
+getTemplate(getMovieType(data, 'movie'));
