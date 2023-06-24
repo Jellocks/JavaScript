@@ -505,11 +505,21 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 60px;
+    width: 366px;
+
     margin-bottom: 14px;
+    position: absolute;
+    z-index: 1;
+    top: 94px;
+
+    left: -31px;
+    padding-left: 63px;
+    background-color: #000000;
 }
 
-.button__sub {
+
+
+.menu-list .button__sub {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 900;
@@ -1053,7 +1063,7 @@ span {
 }
 
 .disabled {
-    opacity: 0;
+    display: none;
 }
 
 .no {
@@ -1121,6 +1131,72 @@ span {
 
 .hbo-max {
     opacity: 0;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq .container {
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 52px;
+}
+
+.faq-title {
+    font-family: Lato;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 17px;
+
+}
+
+.item-subtext {
+    height: 0;
+    opacity: 0;
+    transition: 0.3s ease-in;
+    background-color: #21212C;
+}
+
+.item-title {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+    padding: 15px 0 15px 24px;
+}
+
+.item-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #21212C;
+    cursor: pointer;
+}
+
+.faq-img {
+    margin-right: 24px;
+}
+
+.item-subtitle {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #B7B6DE;
+    background-color: #1B1B24;
+    padding: 14px 0 14px 24px;
+    height: 0;
+
 }
 
 @media (max-width:1281px) {
@@ -1204,7 +1280,9 @@ span {
         width: 1200px;
     }
 
-
+    .faq .container {
+        width: 1100px;
+    }
 
 }
 
@@ -1291,6 +1369,10 @@ span {
     }
 
     .sub-title {
+        width: 900px;
+    }
+
+    .faq .container {
         width: 900px;
     }
 }
@@ -1463,6 +1545,10 @@ span {
     .sub-title {
         width: 850px;
     }
+
+    .faq .container {
+        width: 850px;
+    }
 }
 
 @media (max-width:926px) {
@@ -1556,6 +1642,10 @@ span {
     }
 
     .sub-title {
+        width: 850px;
+    }
+
+    .faq .container {
         width: 850px;
     }
 }
@@ -1773,6 +1863,10 @@ span {
     .hero-img {
         height: 70%;
     }
+
+    .faq .container {
+        width: 600px;
+    }
 }
 
 @media (max-width:671px) {
@@ -1887,7 +1981,7 @@ span {
 
     .sub__buttons {
         margin-top: 40px;
-
+        margin-left: 20px;
     }
 
     .header__content-series {
@@ -1941,6 +2035,10 @@ span {
         font-size: 18px;
     }
 
+    .faq .container {
+        width: 500px;
+    }
+
 }
 
 
@@ -1950,8 +2048,16 @@ span {
         justify-content: center;
         position: relative;
         top: 0;
-        left: -177px;
+        left: -148px;
 
+    }
+
+    .content-link {
+        font-size: 10px;
+    }
+
+    .content-big::before {
+        display: none;
     }
 
     .burger {
@@ -1967,6 +2073,7 @@ span {
         margin: 0 auto;
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     .hero-line_cursor {
@@ -2026,7 +2133,9 @@ span {
         margin-bottom: 15px;
     }
 
-    .sub__card-list {}
+    .sub__card-list {
+        margin-right: 90px;
+    }
 
     .sub__list-item {
         font-family: 'Lato';
@@ -2045,9 +2154,8 @@ span {
         font-family: 'Lato';
         font-style: normal;
         font-weight: 900;
-        font-size: 18px;
-        line-height: 22px;
-        /* identical to box height */
+        font-size: 12px;
+        line-height: 17px;
         background: #E38B00;
         border-radius: 12px;
         margin-bottom: 7px;
@@ -2055,18 +2163,16 @@ span {
     }
 
     .button__sub-primary {
-        width: 304px;
+        width: 210px;
         height: 40px;
         font-family: 'Lato';
         font-style: normal;
         font-weight: 900;
-        font-size: 18px;
-        line-height: 22px;
-        /* identical to box height */
-
-
+        font-size: 12px;
+        line-height: 17px;
+        background: transparent;
         border-radius: 12px;
-
+        margin-bottom: 7px;
         color: #FFFFFF;
     }
 
@@ -2186,6 +2292,7 @@ span {
 
     .header__logo {
         margin-left: 32px;
+        position: relative;
     }
 
     .menu-list {
@@ -2225,6 +2332,10 @@ span {
 
     .content-menu__link {
         color: #FFFFFF;
+    }
+
+    .faq .container {
+        width: 300px;
     }
 
 }
